@@ -1,0 +1,94 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── Sidebar ─────────────────────────────────────────────────────── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border);
+  padding: 1.25rem 0.75rem;
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem 1.5rem;
+}
+.logoIcon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--accent-gradient);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(124, 111, 247, 0.4);
+}
+.logoTitle { font-size: 0.95rem; font-weight: 700; }
+.logoSub { font-size: 0.7rem; color: var(--text-muted); }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0.875rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: left;
+}
+.navItem:hover { background: var(--bg-hover); color: var(--text-primary); }
+.navItemActive {
+  background: rgba(124, 111, 247, 0.15) !important;
+  color: #a89bfb !important;
+}
+.navIcon { font-size: 1rem; }
+.navLabel {}
+
+.sidebarFooter {
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.statusDot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+.dotGreen  { background: var(--success); box-shadow: 0 0 6px var(--success); }
+.dotRed    { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+.dotYellow { background: var(--warning); box-shadow: 0 0 6px var(--warning); }
+.statusLabel { font-size: 0.72rem; color: var(--text-muted); }
+.stackBadges { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+/* ─── Main ────────────────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
